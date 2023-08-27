@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Views.fragments.ProfileFragment">
+    <LinearLayout
+        android:id="@+id/profile_pic_ll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/profile_layout"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.55"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:src="@drawable/baseline_arrow_back_24"
+            android:layout_gravity="top|left"
+            />
+        <LinearLayout
+            android:layout_width="180sp"
+            android:layout_height="180sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@drawable/logo_circle_bg"
+           >
+
+            <ImageView
+                android:layout_width="170sp"
+                android:layout_height="170sp"
+                android:scaleType="fitXY"
+                android:layout_gravity="center"
+                android:src="@drawable/boy" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chayandev Bera"
+            android:textColor="@color/white"
+            android:layout_marginTop="8dp"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/email_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32sp"
+        android:layout_marginTop="16sp"
+        android:layout_marginRight="32sp"
+        android:background="@drawable/profile_element_layout"
+        android:text="home@gmail.com"
+        android:textColor="@color/yellow"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_pic_ll" />
+
+    <TextView
+        android:id="@+id/hint_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36sp"
+        android:text="Email"
+        android:textColor="@android:color/darker_gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/email_tv" />
+
+    <TextView
+        android:id="@+id/password_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32sp"
+        android:layout_marginTop="16sp"
+        android:layout_marginRight="32sp"
+        android:background="@drawable/profile_element_layout"
+        android:text="password"
+        android:textColor="@color/yellow"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hint_email" />
+
+    <TextView
+        android:id="@+id/hint_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36sp"
+        android:text="password"
+        android:textColor="@android:color/darker_gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/password_tv" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/login_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/button_gradient_bg"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="@string/logout"
+        android:layout_marginBottom="16dp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:backgroundTint="@null"
+        app:icon="@drawable/baseline_logout_24"
+        app:iconGravity="textEnd"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

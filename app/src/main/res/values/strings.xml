@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Cloud Counselage Compass</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="log_in_welcome">Welcome Back</string>
+    <string name="log_in_info">Login to your account</string>
+    <string name="sign_up_create_info">Create your new account </string>
+    <string name="sign_up_create">Register</string>
+    <string name="hello_gmail_com">hello@gmail.com</string>
+    <string name="forgot_password">Forgot Password ?</string>
+    <string name="login">Login</string>
+    <string name="or_continue_with">Or continue with</string>
+    <string name="don_t_have_account">Don\'t have account?</string>
+    <string name="sign_up">Sign up</string>
+    <string name="username">Username</string>
+    <string name="sign_in">Sign in</string>
+    <string name="logout">Logout</string>
+    <string name="get">GET</string>
+    <string name="in_time">IN TIME!</string>
+    <string name="job_ready">JOB-READY</string>
+    <string name="with">with</string>
+    <string name="industry_academia_community_iac">INDUSTRY-ACADEMIA COMMUNITY(IAC)</string>
+    <string name="all_12_community_benefits_are_absolutely_free">All 12 Community Benefits Are Absolutely Free</string>
+    <string name="_36000">36000+</string>
+    <string name="members_from_all_academic_years">MEMBERS from all academic years</string>
+    <string name="_400">400+</string>
+    <string name="colleges_pan_india">COLLEGES PAN India</string>
+</resources>
