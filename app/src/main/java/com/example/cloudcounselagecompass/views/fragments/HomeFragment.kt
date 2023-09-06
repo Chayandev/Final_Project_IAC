@@ -1,14 +1,13 @@
-package com.example.cloudcounselagecompass.Views.fragments
+package com.example.cloudcounselagecompass.views.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.ActivityNavigator
 import androidx.navigation.fragment.findNavController
 import com.example.cloudcounselagecompass.R
-import com.example.cloudcounselagecompass.databinding.FragmentSignInBinding
+import com.example.cloudcounselagecompass.databinding.FragmentHomeBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -17,14 +16,14 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [SignInFragment.newInstance] factory method to
+ * Use the [HomeFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class SignInFragment : Fragment() {
+class HomeFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
-    private var binding:FragmentSignInBinding?=null
+    private var binding:FragmentHomeBinding?=null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -36,22 +35,24 @@ class SignInFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
-         binding=FragmentSignInBinding.inflate(inflater,container,false)
+        binding=FragmentHomeBinding.inflate(inflater,container,false)
         return binding!!.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding!!.goSignUp.setOnClickListener{
-          findNavController().navigate(R.id.action_sign_in_to_sign_up)
+        binding!!.profileIc.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_profileFragment)
         }
-    }
-    override fun onDestroyView() {
-        super.onDestroyView()
-        binding=null
+        binding!!.chatBotIc.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_chatFragment)
+        }
+        binding!!.backBtn.setOnClickListener {
+            requireActivity().finish()
+        }
     }
     companion object {
         /**
@@ -60,12 +61,12 @@ class SignInFragment : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment SignInFragment.
+         * @return A new instance of fragment HomeFragment.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            SignInFragment().apply {
+            HomeFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)

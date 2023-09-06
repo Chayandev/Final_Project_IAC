@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Views.fragments.ProfileFragment">
+    tools:context=".views.fragments.ProfileFragment">
     <LinearLayout
         android:id="@+id/profile_pic_ll"
         android:layout_width="match_parent"
@@ -111,6 +111,7 @@
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
         android:text="@string/logout"
+        app:iconTint="@color/white"
         android:layout_marginBottom="16dp"
         android:textColor="@color/white"
         android:textSize="20sp"

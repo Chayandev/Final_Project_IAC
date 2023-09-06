@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp">
+<LinearLayout
+    android:id="@+id/user_chat_ll"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:background="@drawable/user_chat_shape"
+    android:elevation="2dp"
+    android:clipToPadding="false"
+    android:gravity="start"
+    android:layout_marginBottom="8dp"
+    >
+    <TextView
+        android:id="@+id/user_chat_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:longClickable="true"
+        android:padding="8sp"
+        android:maxWidth="280dp"
+        android:minWidth="120sp"
+        android:textColor="@color/white"
+        android:textIsSelectable="true"
+        android:textSize="16sp"
+        />
+</LinearLayout>
+    <LinearLayout
+        android:id="@+id/dp_icon_ll"
+        android:layout_width="30sp"
+        android:layout_height="30sp"
+        android:background="@drawable/bot_bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/user_chat_ll"
+        app:layout_constraintEnd_toStartOf="@id/bot_chat_ll"
+        >
+
+        <ImageView
+            android:id="@+id/dp_icon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/dp_icon"
+            android:scaleType="fitCenter"
+            android:src="@drawable/chat_bot" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/bot_chat_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/dp_icon_ll"
+        app:layout_constraintTop_toBottomOf="@id/user_chat_ll"
+        android:background="@drawable/bot_chat_shape"
+        android:layout_marginStart="8dp"
+        android:gravity="start"
+        android:layout_marginBottom="8dp"
+        >
+    <TextView
+        android:id="@+id/bot_chat_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:longClickable="true"
+        android:padding="8sp"
+        android:maxWidth="280dp"
+        android:minWidth="120sp"
+        android:text="@string/typing"
+        android:textColor="@color/black"
+        android:textIsSelectable="true"
+        android:textSize="16sp"
+        />
+        <ImageView
+            android:id="@+id/copy_icon"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="6dp"
+            android:layout_gravity="end|top"
+             android:contentDescription="@string/copy_icon"
+            android:src="@drawable/baseline_content_copy_24"
+            />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

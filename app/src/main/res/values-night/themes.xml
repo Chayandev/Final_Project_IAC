@@ -3,5 +3,12 @@
     <style name="Base.Theme.CloudCounselageCompass" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="android:colorPrimary">@color/orange_yellow</item>
+        <item name="android:colorSecondary">@color/secondary_color</item>
+        <item name="android:statusBarColor">@color/transparent</item>
+    </style>
+
+    <style name="back_icon" parent="Theme.AppCompat.DayNight">
+        <item name="android:tint">@color/white</item>
     </style>
 </resources>

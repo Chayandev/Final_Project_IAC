@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Views.fragments.SignInFragment">
+    tools:context=".views.fragments.SignInFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -38,14 +38,18 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/welcome_txt" />
 
+
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/email_et_ll"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="16dp"
+            app:boxStrokeColor="@color/input_text_custom_outline_color"
+            app:boxStrokeErrorColor="@android:color/holo_red_light"
+            app:hintTextColor="@color/yellow"
+            android:layout_marginStart="16sp"
+            android:layout_marginTop="16sp"
+            android:layout_marginEnd="16sp"
             android:hint="@string/hello_gmail_com"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -56,7 +60,10 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/email_et"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:cursorVisible="true"
+                android:textCursorDrawable="@drawable/cursor_bg"
+                />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -65,10 +72,13 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="16dp"
-            android:hint="Password"
+            app:boxStrokeColor="@color/input_text_custom_outline_color"
+            app:boxStrokeErrorColor="@android:color/holo_red_light"
+            app:hintTextColor="@color/yellow"
+            android:layout_marginStart="16sp"
+            android:layout_marginTop="16sp"
+            android:layout_marginEnd="16sp"
+            android:hint="@string/password"
             app:endIconMode="password_toggle"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -79,10 +89,12 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/password_et"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:cursorVisible="true"
+                android:textCursorDrawable="@drawable/cursor_bg"
+                />
 
         </com.google.android.material.textfield.TextInputLayout>
-
         <TextView
             android:id="@+id/forgot_txt_clickable"
             android:layout_width="wrap_content"
@@ -106,6 +118,7 @@
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             android:text="@string/login"
+            app:iconTint="@color/white"
             android:textColor="@color/white"
             android:textSize="20sp"
             app:icon="@drawable/baseline_login_24"
@@ -141,7 +154,7 @@
                 android:id="@+id/google_logo_ll"
                 android:layout_width="60sp"
                 android:layout_height="60sp"
-                android:layout_marginRight="16dp"
+                android:layout_marginEnd="16dp"
                 android:background="@drawable/logo_bg_layout"
                 android:gravity="center">
 
@@ -158,7 +171,7 @@
                 android:id="@+id/facebook_logo_ll"
                 android:layout_width="60sp"
                 android:layout_height="60sp"
-                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
                 android:background="@drawable/logo_bg_layout"
                 android:gravity="center">
 

@@ -25,4 +25,25 @@
     <string name="members_from_all_academic_years">MEMBERS from all academic years</string>
     <string name="_400">400+</string>
     <string name="colleges_pan_india">COLLEGES PAN India</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="password">Password</string>
+    <string name="google_logo">google_logo</string>
+    <string name="facebook_logo">facebook_logo</string>
+    <string name="profile_icon">profile_icon</string>
+    <string name="chat_bot">chat_bot</string>
+    <string name="logo">logo</string>
+    <string name="go_back">go_back</string>
+    <string name="cc_logo">cc_logo</string>
+    <string name="bot_logo" />
+    <string name="chatty">Chatty</string>
+    <string name="type_message">Type message</string>
+    <string name="send_logo">send_logo</string>
+    <string name="dp_icon">dp_icon</string>
+    <string name="hello_i_m_chatty_how_can_i_help_you">Hello!👋,I\'m Chatty.\nhow can i help you?</string>
+    <string name="online">Online</string>
+    <string name="typing">typing…</string>
+    <string name="connecting">connecting…</string>
+    <string name="password_txt">Password</string>
+    <string name="copy_icon">copy_icon</string>
 </resources>

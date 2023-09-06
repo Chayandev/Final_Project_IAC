@@ -1,8 +1,14 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.CloudCounselageCompass" parent="Theme.Material3.DayNight.NoActionBar">
-
+        <!-- Secondary color for the app -->
+        <item name="android:colorPrimary">@color/orange_yellow</item>
+        <item name="android:colorSecondary">@color/secondary_color</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:statusBarColor">@color/transparent</item>
     </style>
-
     <style name="Theme.CloudCounselageCompass" parent="Base.Theme.CloudCounselageCompass" />
+    <style name="back_icon" parent="Theme.AppCompat.DayNight">
+        <item name="android:tint">@color/black</item>
+    </style>
 </resources>

@@ -33,6 +33,10 @@ android {
     buildFeatures {
         viewBinding = true
     }
+    packagingOptions {
+        exclude 'META-INF/INDEX.LIST'
+        exclude 'META-INF/DEPENDENCIES'
+    }
 }
 
 dependencies {
@@ -48,6 +52,13 @@ dependencies {
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
 
     // Kotlin
+    //noinspection GradleDependency
     implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
+    //noinspection GradleDependency
     implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
+
+    //dialogflow
+    implementation 'com.google.cloud:google-cloud-dialogflow:2.1.0'
+    implementation 'io.grpc:grpc-okhttp:1.30.0'
+
 }

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Views.activities.SplashScreenActivity"
+    tools:context=".views.activities.SplashScreenActivity"
     android:background="@drawable/gradient_rectangular_bg"
     >
   <LinearLayout
@@ -18,11 +18,13 @@
       android:gravity="center"
       >
    <ImageView
+       android:id="@+id/logo_imgView"
        android:layout_width="150dp"
        android:layout_height="150dp"
         android:layout_gravity="center"
        android:scaleType="fitXY"
        android:src="@drawable/logo"
+       android:contentDescription="@string/logo"
      />
   </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

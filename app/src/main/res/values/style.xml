@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
     <style name="input_text_rounded_corner" parent="ShapeAppearance.MaterialComponents.SmallComponent">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">16dp</item>
     </style>
+ <style name="cardView_chat_bot" parent="Widget.MaterialComponents.CardView">
+     <item name="cornerFamily">rounded</item>
+     <item name="cornerSizeBottomRight">50dp</item>
+     <item name="cornerSizeBottomLeft">50dp</item>
+     <item name="cornerSizeTopRight">50dp</item>
+ </style>
 </resources>

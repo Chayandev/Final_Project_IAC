@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Views.fragments.SignUpFragment">
+    tools:context=".views.fragments.SignUpFragment">
     <ImageView
         android:id="@+id/back_btn"
         android:layout_width="wrap_content"
@@ -14,7 +14,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:background="@drawable/gradient_circular_bg"
-        />
+        android:contentDescription="@string/go_back" />
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -53,6 +53,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16sp"
+            app:boxStrokeColor="@color/input_text_custom_outline_color"
+            app:boxStrokeErrorColor="@android:color/holo_red_light"
+            app:hintTextColor="@color/yellow"
             android:layout_marginTop="16sp"
             android:layout_marginEnd="16sp"
             android:hint="@string/username"
@@ -66,7 +69,8 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/username_et"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -74,6 +78,9 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:boxStrokeColor="@color/input_text_custom_outline_color"
+            app:boxStrokeErrorColor="@android:color/holo_red_light"
+            app:hintTextColor="@color/yellow"
             android:layout_marginStart="16sp"
             android:layout_marginTop="16sp"
             android:layout_marginEnd="16sp"
@@ -87,7 +94,8 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/email_et"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -96,10 +104,13 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:boxStrokeColor="@color/input_text_custom_outline_color"
+            app:boxStrokeErrorColor="@android:color/holo_red_light"
+            app:hintTextColor="@color/yellow"
             android:layout_marginStart="16sp"
             android:layout_marginTop="16sp"
             android:layout_marginEnd="16sp"
-            android:hint="Password"
+            android:hint="@string/password"
             app:endIconMode="password_toggle"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -110,7 +121,8 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/password_et"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -119,10 +131,13 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:boxStrokeColor="@color/input_text_custom_outline_color"
+            app:boxStrokeErrorColor="@android:color/holo_red_light"
+            app:hintTextColor="@color/yellow"
             android:layout_marginStart="16sp"
             android:layout_marginTop="16sp"
             android:layout_marginEnd="16sp"
-            android:hint="Confirm Password"
+            android:hint="@string/confirm_password"
             app:endIconMode="password_toggle"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -133,24 +148,12 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/confirm_password_et"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                />
 
         </com.google.android.material.textfield.TextInputLayout>
-
-        <TextView
-            android:id="@+id/forgot_txt_clickable"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8sp"
-            android:layout_marginEnd="16sp"
-            android:text="@string/forgot_password"
-            android:textColor="@color/yellow"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/confirm_password_et_ll" />
-
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/login_btn"
+            android:id="@+id/Sign_up_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16sp"
@@ -159,13 +162,13 @@
             android:background="@drawable/button_gradient_bg"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:text="@string/login"
+            android:text="@string/sign_up"
             android:textColor="@color/white"
             android:textSize="20sp"
             app:backgroundTint="@null"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/forgot_txt_clickable" />
+            app:layout_constraintTop_toBottomOf="@id/confirm_password_et_ll" />
 
         <TextView
             android:id="@+id/social_info"
@@ -177,7 +180,7 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/login_btn" />
+            app:layout_constraintTop_toBottomOf="@id/Sign_up_btn" />
 
         <LinearLayout
             android:id="@+id/social_ll"
@@ -193,7 +196,7 @@
                 android:id="@+id/google_logo_ll"
                 android:layout_width="60sp"
                 android:layout_height="60sp"
-                android:layout_marginRight="16dp"
+                android:layout_marginEnd="16dp"
                 android:background="@drawable/logo_bg_layout"
                 android:gravity="center">
 
@@ -203,14 +206,15 @@
                     android:layout_height="30sp"
                     android:layout_gravity="center"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/google_logo" />
+                    android:src="@drawable/google_logo"
+                    android:contentDescription="@string/google_logo" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/facebook_logo_ll"
                 android:layout_width="60sp"
                 android:layout_height="60sp"
-                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
                 android:background="@drawable/logo_bg_layout"
                 android:gravity="center">
 
@@ -220,7 +224,8 @@
                     android:layout_height="30sp"
                     android:layout_gravity="center"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/facebook_logo" />
+                    android:src="@drawable/facebook_logo"
+                    android:contentDescription="@string/facebook_logo" />
             </LinearLayout>
         </LinearLayout>
 
@@ -238,7 +243,7 @@
                 android:id="@+id/account_info"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/don_t_have_account"
+                android:text="@string/already_have_an_account"
                 android:textSize="16sp" />
 
             <TextView
