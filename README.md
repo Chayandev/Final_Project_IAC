@@ -42,7 +42,7 @@
 
 ## Details :
 
-### Splash Screen :
+### 📱Splash Screen :
 
 ![Screenshot 2023-09-29 011150](https://github.com/Chayandev/ChatBotProject_IAC/assets/91884990/6318d6a1-29c2-4c4f-87a9-7bf859c9630b)
 
