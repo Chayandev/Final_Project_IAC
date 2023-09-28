@@ -14,7 +14,8 @@
             app:destination="@id/profileFragment" />
         <action
             android:id="@+id/action_homeFragment_to_chatFragment"
-            app:destination="@id/chatFragment" />
+            app:destination="@id/chatFragment"
+            />
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
@@ -33,8 +34,6 @@
         <action
             android:id="@+id/action_chatFragment_to_homeFragment"
             app:destination="@id/homeFragment"
-            app:popUpTo="@id/homeFragment"
-            app:popUpToInclusive="true"
             />
     </fragment>
 </navigation>

@@ -15,4 +15,6 @@
 local.properties
 # Ignore the JSON file containing sensitive data
 /app/src/main/res/raw/credentials.json
+/app/google-services.json
+/app/src/main/res/raw/app_config.properties
 

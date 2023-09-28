@@ -46,4 +46,16 @@
     <string name="connecting">connecting…</string>
     <string name="password_txt">Password</string>
     <string name="copy_icon">copy_icon</string>
+    <string name="email">Email</string>
+    <string name="profile_pic">profile_pic</string>
+    <string name="profile">Profile</string>
+    <string name="home_gmail_com">home@gmail.com</string>
+    <string name="reset_password">RESET PASSWORD</string>
+    <string name="des1">Please enter the email you used when registering your account and click "Send".\n\nWe will send an email with a link to a page where you can easily reset your password.</string>
+    <string name="send">Send</string>
+    <string name="cancel">Cancel</string>
+    <string name="camera">camera</string>
+    <string name="save">save</string>
+    <string name="edit_icon">edit_icon</string>
+
 </resources>

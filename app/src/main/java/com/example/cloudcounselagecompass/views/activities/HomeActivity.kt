@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.Window
 import androidx.core.content.ContextCompat
 import androidx.navigation.NavController
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import com.example.cloudcounselagecompass.R
 import com.example.cloudcounselagecompass.databinding.ActivityAuthBinding
@@ -32,6 +33,7 @@ class HomeActivity : AppCompatActivity() {
     }
     // Handle Up button press to navigate back
     override fun onSupportNavigateUp(): Boolean {
+        val navController = findNavController(R.id.home_nav_host_fragment)
         return navController.navigateUp() || super.onSupportNavigateUp()
     }
 }

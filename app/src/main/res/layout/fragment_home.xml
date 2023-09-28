@@ -191,8 +191,8 @@
 
                     <ImageView
                         android:id="@+id/img_member"
-                        android:layout_width="80sp"
-                        android:layout_height="50dp"
+                        android:layout_width="@dimen/_80sdp"
+                        android:layout_height="@dimen/_50sdp"
                         android:scaleType="fitXY"
                         android:src="@drawable/member_img"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -243,8 +243,8 @@
 
                     <ImageView
                         android:id="@+id/img_clg"
-                        android:layout_width="80sp"
-                        android:layout_height="50dp"
+                        android:layout_width="@dimen/_80sdp"
+                        android:layout_height="@dimen/_50sdp"
                         android:scaleType="fitXY"
                         android:src="@drawable/clg_img"
                         app:layout_constraintEnd_toEndOf="parent"
