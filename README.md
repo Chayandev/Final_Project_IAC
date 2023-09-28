@@ -14,6 +14,21 @@
 - Firebase Storage 💾
 - Dialogflow 💬
 
+## Important Gradle Dependencies
+
+- [Dialogflow](https://cloud.google.com/dialogflow/docs/reference/libraries) for natural language understanding and interaction.
+   ```gradle
+   implementation 'com.google.cloud:google-cloud-dialogflow:2.1.0'
+   implementation 'io.grpc:grpc-okhttp:1.30.0'
+   
+- Glide for efficient image loading and displaying from Firebase Storage.
+  ```gradle
+  implementation 'com.github.bumptech.glide:glide:4.12.0'
+  annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+  
+```diff
+- 🛑NOTE:- These dependencies are crucial for enabling dialogflow-based natural language processing and efficient image loading in your Android app
+```
 
 ---
 
@@ -167,4 +182,6 @@ The Chat Fragment in the CloudCounselage Compass app allows users to communicate
 - RecyclerView for smooth message scrolling.
 - ConnectivityManager to monitor network connectivity.
 
-
+```diff
+- 🛑NOTE:- All sensitive credentials or API keys (dialog flow and Firebase real time authentication and Storage) are not included in the repository , need to set up their own credentials to use the projec
+```
