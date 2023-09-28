@@ -30,6 +30,19 @@
 - 🛑NOTE:- These dependencies are crucial for enabling dialogflow-based natural language processing and efficient image loading in your Android app
 ```
 
+## Permissions
+
+#### Before you start using this app, please note that it requires the following permissions:
+
+### 🌐 Internet Access
+
+- **Permission Description**: This app requires internet access to communicate with external services and provide real-time features.
+- **Why We Need It**: [Firebase authentication & Chat response retch from Dialog flow]
+
+### 🖼️ Phone Gallery Access
+
+- **Permission Description**: This app requires access to your device's gallery or storage to allow you to select a profile icon.
+  
 ---
 
 ## App OverView:
