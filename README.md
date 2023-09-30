@@ -200,6 +200,14 @@ The Chat Fragment in the CloudCounselage Compass app allows users to communicate
    Right know you can download the apk of this app given below
    [APK](https://github.com/Chayandev/Final_Project_IAC/tree/master/APK/cloud-councelage-compass-release.apk)
 
+  ### Guide :
+  
+  *Click on the Blue APK , you will be directed to the apk file location now right side click on the download raw file.*
+  
+  *After Downloading the Apk , give permission(anyway install) to install this app .*
+  
+  *Enable Internet for Using this app.*
+
 ```diff
 - 🛑NOTE:- All sensitive credentials or API keys (dialog flow and Firebase real time authentication and Storage) are not included in the repository , need to set up their own credentials to use the projec
 ```
