@@ -19,5 +19,5 @@ local.properties
 /app/src/main/res/raw/app_config.properties
 
 # igonre the APK folder
-/master/APK
+/APK
 
