@@ -51,7 +51,7 @@ class SignUpFragment : Fragment() {
     private var isPasswordValid = false
 
     //google sign in
-    private lateinit var  googleSignInHelper: GoogleSignInHelper
+    private lateinit var googleSignInHelper: GoogleSignInHelper
 
     //fire base auth
     private lateinit var firebaseAuth: FirebaseAuth
@@ -63,7 +63,7 @@ class SignUpFragment : Fragment() {
         super.onCreate(savedInstanceState)
         firebaseAuth = Firebase.auth
         database = Firebase.database.reference
-        googleSignInHelper=GoogleSignInHelper(this, resources)
+        googleSignInHelper = GoogleSignInHelper(this, resources)
     }
 
     override fun onCreateView(
@@ -87,7 +87,10 @@ class SignUpFragment : Fragment() {
                 val userName = binding!!.usernameEt.text.toString()
                 val email = binding!!.emailEt.text.toString().trim()
                 val password = binding!!.passwordEt.text.toString().trim()
-                ProgressBarUtil.showCustomProgressBar(requireContext(),R.layout.custom_progress_bar)
+                ProgressBarUtil.showCustomProgressBar(
+                    requireContext(),
+                    R.layout.custom_progress_bar
+                )
 
                 //fire-base sign up logic
                 firebaseAuth.createUserWithEmailAndPassword(email, password)
@@ -102,8 +105,12 @@ class SignUpFragment : Fragment() {
                                         "Verification e-mail is send",
                                         Toast.LENGTH_SHORT
                                     ).show()
-                                    saveData(binding!!.emailEt.text.toString().trim(),binding!!.usernameEt.text.toString().trim(),"")
-                                    updateUi()
+                                    saveData(
+                                        binding!!.emailEt.text.toString().trim(),
+                                        binding!!.usernameEt.text.toString().trim(),
+                                        "",0
+                                    )
+                                        //  updateUi(0)
                                 }?.addOnFailureListener {
                                     Toast.makeText(
                                         requireActivity(), it.toString(), Toast.LENGTH_SHORT
@@ -142,11 +149,11 @@ class SignUpFragment : Fragment() {
                 Toast.makeText(
                     requireActivity(), "fill the form correctly", Toast.LENGTH_SHORT
                 ).show()
-              ProgressBarUtil.cancelCustomProgressBar()
+                ProgressBarUtil.cancelCustomProgressBar()
             }
         }
         binding!!.backBtn.setOnClickListener {
-           ProgressBarUtil.cancelCustomProgressBar()
+            ProgressBarUtil.cancelCustomProgressBar()
             findNavController().navigate(R.id.action_signUpFragment_to_signInFragment)
         }
 
@@ -204,43 +211,58 @@ class SignUpFragment : Fragment() {
                             // Get user information from Google account
                             val googleEmail = account.email
                             val googleUserName = account.displayName
-                            val googleDp=account.photoUrl.toString()
+                            val googleDp = account.photoUrl.toString()
                             // Save user data to Firebase Realtime Database
                             if (user != null) {
-                                saveData(googleUserName!!, googleEmail!!, googleDp)
+                                saveData(googleEmail!!, googleUserName!!, googleDp, 1)
                             }
                             //updateUI
-                            findNavController().navigate(R.id.action_signUpFragment_to_homeActivity)
-                           ProgressBarUtil.cancelCustomProgressBar()
-                            requireActivity().finish()
                         } else {
                             // Google Sign-In failed
-                            Toast.makeText(requireActivity(), "Google Sign-In failed", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(
+                                requireActivity(),
+                                "Google Sign-In failed",
+                                Toast.LENGTH_SHORT
+                            ).show()
                             ProgressBarUtil.cancelCustomProgressBar()
                         }
                     }
             }
         }
     }
-    private fun saveData(email:String,userName:String,picture:String) {
+
+    private fun saveData(email: String, userName: String, picture: String, flag: Int) {
 //        val email = binding!!.emailEt.text.toString().trim()
 //        val userName = binding!!.usernameEt.text.toString().trim()
         val userId = FirebaseAuth.getInstance().currentUser!!.uid
-       // val defaultImageUrl = getResourceUri(defaultImageResourceId)
-        val user = UserModelData(userName,email,picture)
+        // val defaultImageUrl = getResourceUri(defaultImageResourceId)
+        val user = UserModelData(userName, email, picture)
 
-        database.child("User").child(userId).setValue(user).addOnCompleteListener{
-            if(it.isSuccessful){
-                Toast.makeText(requireActivity(),"Account Details are saved successfully!",Toast.LENGTH_SHORT).show()
-            }else{
-                Toast.makeText(requireActivity(),"Account Details Saving failed",Toast.LENGTH_SHORT).show()
+        database.child("User").child(userId).setValue(user).addOnCompleteListener {
+            if (it.isSuccessful) {
+                Toast.makeText(
+                    requireActivity(),
+                    "Account Details are saved successfully!",
+                    Toast.LENGTH_SHORT
+                ).show()
+                updateUi(flag)
+            } else {
+                Toast.makeText(
+                    requireActivity(),
+                    "Account Details Saving failed",
+                    Toast.LENGTH_SHORT
+                ).show()
             }
         }
     }
-    
-    private fun updateUi() {
-        findNavController().navigate(R.id.action_signUpFragment_to_signInFragment)
-      ProgressBarUtil.cancelCustomProgressBar()
+
+    private fun updateUi(flag: Int) {
+        if (flag == 0)
+            findNavController().navigate(R.id.action_signUpFragment_to_signInFragment)
+        else
+            findNavController().navigate(R.id.action_signUpFragment_to_homeActivity)
+        ProgressBarUtil.cancelCustomProgressBar()
+        requireActivity().finish()
     }
 
     //confirmation password validity check

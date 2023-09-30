@@ -38,13 +38,6 @@ android {
         exclude 'META-INF/INDEX.LIST'
         exclude 'META-INF/DEPENDENCIES'
     }
-    buildTypes {
-        release {
-            minifyEnabled true
-            shrinkResources true
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-    }
 }
 
 dependencies {

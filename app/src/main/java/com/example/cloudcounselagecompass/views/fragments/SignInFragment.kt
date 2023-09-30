@@ -177,10 +177,8 @@ class SignInFragment : Fragment() {
                              val googleDp=account.photoUrl.toString()
                             // Save user data to Firebase Realtime Database
                             if (user != null) {
-                                saveData(googleUserName!!, googleEmail!!, googleDp)
+                                saveData(googleEmail!!,googleUserName!!, googleDp)
                             }
-                            updateUi()
-                            requireActivity().finish()
                         } else {
                             // Google Sign-In failed
                             Toast.makeText(requireContext(), "Google Sign-In failed", Toast.LENGTH_SHORT).show()
@@ -202,6 +200,8 @@ class SignInFragment : Fragment() {
                     "Account Details are saved successfully!",
                     Toast.LENGTH_SHORT
                 ).show()
+                updateUi()
+              //  requireActivity().finish()
             } else {
                 Toast.makeText(
                     requireActivity(),
