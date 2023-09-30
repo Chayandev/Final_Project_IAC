@@ -18,6 +18,6 @@ local.properties
 /app/google-services.json
 /app/src/main/res/raw/app_config.properties
 
-//igonre the APK folder
+# igonre the APK folder
 /APK
 
