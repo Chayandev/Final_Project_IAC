@@ -195,7 +195,7 @@ The Chat Fragment in the CloudCounselage Compass app allows users to communicate
 - RecyclerView for smooth message scrolling.
 - ConnectivityManager to monitor network connectivity.
 
-  ## App-Instalation
+  ## App-Installation
   
    Right know you can download the apk of this app given below
    [APK](https://github.com/Chayandev/Final_Project_IAC/tree/master/APK/cloud-councelage-compass-release.apk)
