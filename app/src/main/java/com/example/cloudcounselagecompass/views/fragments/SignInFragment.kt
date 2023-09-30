@@ -110,7 +110,7 @@ class SignInFragment : Fragment() {
                     }
             } else {
                 Toast.makeText(
-                    requireContext(),
+                    requireActivity(),
                     "Fill the required fields correctly",
                     Toast.LENGTH_SHORT
                 )
@@ -153,7 +153,7 @@ class SignInFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }.addOnFailureListener {
-                        Toast.makeText(requireContext(), "Failed:$it", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(requireActivity(), "Failed:$it", Toast.LENGTH_SHORT).show()
                     }
                 resetPasswordDialog.dismiss()
             }
@@ -198,13 +198,13 @@ class SignInFragment : Fragment() {
         database.child("User").child(userId).setValue(user).addOnCompleteListener {
             if (it.isSuccessful) {
                 Toast.makeText(
-                    requireContext(),
+                    requireActivity(),
                     "Account Details are saved successfully!",
                     Toast.LENGTH_SHORT
                 ).show()
             } else {
                 Toast.makeText(
-                    requireContext(),
+                    requireActivity(),
                     "Account Details Saving failed",
                     Toast.LENGTH_SHORT
                 ).show()

@@ -128,7 +128,7 @@ class ProfileFragment : Fragment() {
                 ProgressBarUtil.cancelCustomProgressBar()
             }
         }.addOnFailureListener {
-            Toast.makeText(requireContext(), it.toString(), Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireActivity(), it.toString(), Toast.LENGTH_SHORT).show()
             ProgressBarUtil.cancelCustomProgressBar()
         }
     }
@@ -147,17 +147,17 @@ class ProfileFragment : Fragment() {
                     storageRef.downloadUrl.addOnSuccessListener { imageUrl ->
                         storeImage(imageUrl)
                     }.addOnFailureListener { e ->
-                        Toast.makeText(requireContext(), "Failed to get image URL: ${e.message}", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(requireActivity(), "Failed to get image URL: ${e.message}", Toast.LENGTH_SHORT).show()
                     ProgressBarUtil.cancelCustomProgressBar()
                     }
                 }
                 .addOnFailureListener { e ->
-                    Toast.makeText(requireContext(), "Failed to upload image: ${e.message}", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireActivity(), "Failed to upload image: ${e.message}", Toast.LENGTH_SHORT).show()
                 ProgressBarUtil.cancelCustomProgressBar()
                 }
         } else {
             // Handle the case where imageUri is null (no image selected)
-            Toast.makeText(requireContext(), "Please select an image to upload.", Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireActivity(), "Please select an image to upload.", Toast.LENGTH_SHORT).show()
           //  uploadProfileImage()
         }
     }
@@ -169,11 +169,11 @@ class ProfileFragment : Fragment() {
         )
         database.child("User").child(userId!!).updateChildren(updateImage)
             .addOnSuccessListener {
-            Toast.makeText(requireContext(),"Profile Picture is Updated Successfully!",Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireActivity(),"Profile Picture is Updated Successfully!",Toast.LENGTH_SHORT).show()
                 ProgressBarUtil.cancelCustomProgressBar()
         }
             .addOnFailureListener { error ->
-                Toast.makeText(requireContext(),error.message,Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireActivity(),error.message,Toast.LENGTH_SHORT).show()
                 ProgressBarUtil.cancelCustomProgressBar()
             }
     }

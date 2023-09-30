@@ -98,7 +98,7 @@ class SignUpFragment : Fragment() {
                             firebaseAuth.currentUser?.sendEmailVerification()
                                 ?.addOnSuccessListener {
                                     Toast.makeText(
-                                        requireContext(),
+                                        requireActivity(),
                                         "Verification e-mail is send",
                                         Toast.LENGTH_SHORT
                                     ).show()
@@ -106,7 +106,7 @@ class SignUpFragment : Fragment() {
                                     updateUi()
                                 }?.addOnFailureListener {
                                     Toast.makeText(
-                                        requireContext(), it.toString(), Toast.LENGTH_SHORT
+                                        requireActivity(), it.toString(), Toast.LENGTH_SHORT
                                     ).show()
                                 }
                             ProgressBarUtil.cancelCustomProgressBar()
@@ -215,7 +215,7 @@ class SignUpFragment : Fragment() {
                             requireActivity().finish()
                         } else {
                             // Google Sign-In failed
-                            Toast.makeText(requireContext(), "Google Sign-In failed", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(requireActivity(), "Google Sign-In failed", Toast.LENGTH_SHORT).show()
                             ProgressBarUtil.cancelCustomProgressBar()
                         }
                     }
@@ -231,9 +231,9 @@ class SignUpFragment : Fragment() {
 
         database.child("User").child(userId).setValue(user).addOnCompleteListener{
             if(it.isSuccessful){
-                Toast.makeText(requireContext(),"Account Details are saved successfully!",Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireActivity(),"Account Details are saved successfully!",Toast.LENGTH_SHORT).show()
             }else{
-                Toast.makeText(requireContext(),"Account Details Saving failed",Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireActivity(),"Account Details Saving failed",Toast.LENGTH_SHORT).show()
             }
         }
     }
