@@ -196,8 +196,9 @@ The Chat Fragment in the CloudCounselage Compass app allows users to communicate
 - ConnectivityManager to monitor network connectivity.
 
   ## App-Instalation
-   Right know you cn download the apk of this app given below
-   
+  
+   Right know you can download the apk of this app given below
+   [APK](https://github.com/Chayandev/Final_Project_IAC/tree/master/APK)
 
 ```diff
 - 🛑NOTE:- All sensitive credentials or API keys (dialog flow and Firebase real time authentication and Storage) are not included in the repository , need to set up their own credentials to use the projec
